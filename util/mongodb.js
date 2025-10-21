@@ -33,7 +33,7 @@ export async function connectToDatabase() {
     };
 
     const mongoURL =
-      process.env.NODE_ENV === 'development' ? process.env.LOCAL_MONGODB : process.env.MONGODB_URI;
+    process.env.MONGODB_URI;
 
     cached.promise = MongoClient.connect(mongoURL, opts).then((client) => {
       return {

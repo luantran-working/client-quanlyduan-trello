@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
     "start": "next start",
     "lint": "eslint --fix .",
@@ -11,6 +11,9 @@
   },
   "keywords": [],
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.5.2",
     "@emotion/react": "^11",
